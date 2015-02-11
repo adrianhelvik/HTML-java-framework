@@ -53,9 +53,17 @@ public class HtmlTag implements HtmlElement{
     public void addClass(String className) {
         addAttribute("class", className);
     }
-
-    public void addId(String idName) {
+    
+    /**
+     * Set the id attribute of an HtmlTag (removes any existing id)
+     */
+    public void setId(String idName) {
+        removeAttribute("id");
         addAttribute("id", idName);
+    }
+
+    public void removeAttribute(String attrName) {
+        attributes.remove(attrName);
     }
 
     public String compile() {
