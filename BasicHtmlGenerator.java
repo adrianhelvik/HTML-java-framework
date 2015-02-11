@@ -29,7 +29,7 @@ public class BasicHtmlGenerator {
     /**
      * Create a basic Html Document
      */
-    private static HtmlDocument createBasicDocument() {
+    public static HtmlDocument createBasicDocument() {
 
         // Create document
         HtmlDocument document = new HtmlDocument();

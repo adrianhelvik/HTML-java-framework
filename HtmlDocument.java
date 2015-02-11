@@ -83,7 +83,7 @@ public class HtmlDocument {
     }
     
     // Seemingly ok
-    public HtmlElement getElementById(String id) {
+    public HtmlTag getElementById(String id) {
         HtmlElement[] children = getAllChildren();
         for (HtmlElement e : children) {
 
@@ -99,7 +99,7 @@ public class HtmlDocument {
                 for (String tagId : ids) {
 
                     // If id is found, return element
-                    if (id.equals(tagId)) return e;
+                    if (id.equals(tagId)) return t;
                 }
             }
         }
