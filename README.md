@@ -1,17 +1,25 @@
 # HTML-parser
 Description:
-Java program for parsing html files, with selectors inspired by JavScript.
+This is a java program for parsing html files, with selectors inspired by JavScript. Not quite there for all the methods yet though.
 
 How to use:
 Start by creating a new HtmlDocument. This will contain a doctype and an html-tag
-HtmlElements is an interface for HtmlTag and HtmlString.
+HtmlTags store HtmlElement objects. HtmlElement is an interface for HtmlTag and HtmlString.
+HtmlString is basically a String wrapper class that enables some functionality
+(indentation relative to parent for example) and storing the elements in the same ArrayList.
 
-Elements can be accessed using these methods: (when document is an instance of HtmlDocument)
-- document.getElementsByTagName(String tagName): HtmlTag[]
-- document.getElementsByClassName(String className): HtmlTag[]
-- document.getElementById(String id): HtmlTag
-- document.getAllChildren(String id): HtmlElements
-- - Returns an HtmlElement-array
+Elements can be accessed using these methods:
 
-An element can be appended to an HtmlTag object: (when tag is an instance of HtmlTag)
-  tag.addElement(HtmlElement e)
+For HtmlDocument objects:
+- HtmlDocument.getElementsByTagName(String tagName): HtmlTag[]
+- HtmlDocument.getElementsByClassName(String className): HtmlTag[]
+- HtmlDocument.getElementById(String id): HtmlTag
+- HtmlDocument.getAllChildren(String id): HtmlElement[]
+
+For HtmlTag objects:
+- HtmlTag.getParent()
+- HtmlTag.getChildren()
+
+Elements can be appended to an element or the document using these methods:
+- HtmlTag.addElement(HtmlElement/HtmlTag e): void
+- HtmlDocument.addElement(HtmlElement e): void
