@@ -18,13 +18,6 @@ public class BasicHtmlGenerator {
         sopl(document.compile());
     }
 
-    // Testing
-    private static void checkIndent(HtmlElement elem, int desired) {
-        String message = (elem.getIndentationLevel() == desired) ? "OK. " : "ERROR. ";
-        message += "Indentation level of " + elem.getName() + ": " + elem.getIndentationLevel() + ". Should be 2";
-
-        sopl(message);
-    }
     
     /**
      * Create a basic Html Document

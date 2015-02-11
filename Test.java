@@ -3,6 +3,8 @@ class Test {
         testGetElementById();
     }
 
+    // Test methods
+    
     private static void testGetElementById() {
         String testId = "lolwtf";
 
@@ -22,10 +24,20 @@ class Test {
         // Print test id
         sopl(
                 "Searching for html node with id: \"" + testId + "\"",
-                "Found: " + d.getElementById(testId).compile()
+                "Found: ",
+                d.getElementById(testId).compile()
         );
 
     }
+
+    private static void checkIndent(HtmlElement elem, int desired) {
+        String message = (elem.getIndentationLevel() == desired) ? "OK. " : "ERROR. ";
+        message += "Indentation level of " + elem.getName() + ": " + elem.getIndentationLevel() + ". Should be 2";
+
+        sopl(message);
+    }
+    
+    // Print methods
 
     public static void sopl(Object... args) {
         if (args.length == 0) System.out.println();
