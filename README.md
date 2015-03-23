@@ -24,3 +24,4 @@ Elements can be appended to an element or the document using these methods:
 - HtmlTag.addElement(HtmlElement/HtmlTag e): void
 - HtmlDocument.addElement(HtmlElement e): void
 - HtmlTag.addElement(HtmlElement e): void
+
