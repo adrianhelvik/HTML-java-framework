@@ -1,6 +1,6 @@
-# HTML-parser
+# HTML java framework
 Description:
-This is a java program for parsing html files, with selectors inspired by JavScript. Not quite there for all the methods yet though.
+This is a java program for creating html files, with selectors inspired by JavScript. Not quite there for all the methods yet though.
 
 How to use:
 Start by creating a new HtmlDocument. This will contain a doctype and an html-tag
