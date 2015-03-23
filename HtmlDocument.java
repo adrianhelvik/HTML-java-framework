@@ -117,6 +117,7 @@ public class HtmlDocument {
 
             // If element is an html tag
             if (e instanceof HtmlTag && e != null) {
+
                 // Set t to html tag
                 HtmlTag t = (HtmlTag) e;
 
